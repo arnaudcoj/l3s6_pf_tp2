@@ -14,8 +14,9 @@ pointAintercaler (xA, yA) (xB, yB) = ((xA + xB)/2 + (yB - yA)/2, (
 
 pasDragon :: Path -> Path
 
-pasDragon (xA:xB:xs) = xA:(pointAintercaler xA xB):[xB]
-pasDragon (xA:xB:xC:xs) = xA:(pointAintercaler xA xB):xB:(pointAintercaler xC xB):(pasDragon xC:xs)
+pasDragon (xA:[]) = [xA]
+pasDragon (xA:xB:[]) = xA:(pointAintercaler xA xB):[xB]
+pasDragon (xA:xB:xC:xs) = xA:(pointAintercaler xA xB):xB:(pointAintercaler xC xB):(pasDragon (xC:xs))
 
 --Q7
 
