@@ -1,3 +1,11 @@
+{-
+TP2 Programmation Fonctionnelle
+Fichier présentant le début du TP (Q1 à Q4)
+
+Matthieu Caron
+Arnaud Cojez
+-}
+
 --Q1
 
 alterne :: [t] -> [t]
